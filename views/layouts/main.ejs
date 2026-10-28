@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= titulo %>
+    </title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="barra-navegacion">
+            <div class="marca">
+                <div class="marca-superior">
+                    <img src="/img/TorosGym.png" alt="TorosGym">
+                    <h1>TorosGym</h1>
+                </div>
+                <p>Sistema de reserva de turnos</p>
+            </div>
+
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/reservas">Turnos</a></li>
+                <li><a href="/reservas/nueva">Reservar turno</a></li>
+                <li><a href="/estado">Estado</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <%- body %>
+    </main>
+
+    <footer>
+        <p>Solicitud: <%= solicitudId %>
+        </p>
+        <p>TOROSGYM· Sistema de reservas</p>
+    </footer>
+
+</body>
+
+</html>

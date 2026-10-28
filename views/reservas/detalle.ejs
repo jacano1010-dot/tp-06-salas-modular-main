@@ -1,0 +1,33 @@
+<section>
+    <p>Turnos del gimnasio</p>
+    <h2>Detalle del turno</h2>
+
+    <article class="reserva-card">
+        <h3>Turno #<%= reserva.id %>
+        </h3>
+
+        <p><strong>Socio:</strong>
+            <%= reserva.estudiante %>
+        </p>
+        <p><strong>Email:</strong>
+            <%= reserva.email %>
+        </p>
+        <p><strong>Sucursal:</strong>
+            <%= reserva.sucursal %>
+        </p>
+        <p><strong>Fecha:</strong>
+            <%= reserva.fecha %>
+        </p>
+        <p><strong>Turno:</strong>
+            <%= reserva.turno %>
+        </p>
+        <p><strong>Personas:</strong>
+            <%= reserva.personas %>
+        </p>
+    </article>
+
+    <div class="botones">
+        <a href="/reservas" class="boton boton-secundario">Volver a turnos</a>
+        <a href="/reservas/nueva" class="boton">Reservar otro turno</a>
+    </div>
+</section>

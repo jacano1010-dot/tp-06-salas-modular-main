@@ -1,0 +1,390 @@
+:root {
+    --rojo-principal: #b10020;
+    --rojo-oscuro: #8b001a;
+    --negro-profundo: #0b0b0b;
+    --negro-secundario: #151515;
+    --gris: #bdbdbd;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--negro-profundo);
+    color: #e5e5e5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid rgba(139, 0, 26, 0.5);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.barra-navegacion {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+.marca {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.marca-superior {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.marca img {
+    display: block;
+    width: 70px;
+    height: auto;
+}
+
+.marca h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.marca p {
+    margin: 3px 0 0;
+    font-size: 0.85rem;
+}
+.marca img {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin-bottom: 6px;
+}
+
+.marca h1 {
+    margin: 0;
+    color: var(--rojo-principal);
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.marca p {
+    margin: 5px 0 0;
+    color: #888;
+    font-size: 14px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #d5d5d5;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--rojo-principal);
+}
+
+main {
+    min-height: calc(100vh - 170px);
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 25px;
+}
+
+section h2 {
+    margin-top: 0;
+    color: var(--blanco);
+    font-size: 42px;
+    font-weight: 800;
+}
+
+section h3 {
+    color: var(--rojo-principal);
+    font-size: 28px;
+}
+
+section p {
+    color: var(--gris);
+    line-height: 1.7;
+}
+
+.hero {
+    max-width: none;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(139, 0, 26, 0.35),
+            rgba(0, 0, 0, 0.95));
+}
+
+.hero-contenido {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 25px;
+}
+
+.hero-contenido h2 {
+    max-width: 850px;
+    margin-bottom: 20px;
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.05;
+    text-shadow: 0 0 15px var(--rojo-principal);
+}
+
+.hero-contenido p {
+    max-width: 700px;
+    font-size: 20px;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 8px;
+    background: var(--rojo-principal);
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid var(--rojo-principal);
+    transition: all 0.3s ease;
+}
+
+.boton:hover {
+    background: var(--rojo-oscuro);
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    background: transparent;
+}
+
+.boton-secundario:hover {
+    background: var(--rojo-principal);
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 0, 26, 0.55);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    border-color: var(--rojo-principal);
+    box-shadow: 0 10px 30px rgba(177, 0, 32, 0.18);
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+    color: var(--blanco);
+    font-size: 21px;
+}
+
+.reservas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.reserva-card {
+    background: var(--negro-secundario);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 0, 26, 0.55);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.reserva-card h3 {
+    margin-top: 0;
+    color: var(--rojo-principal);
+}
+
+.reserva-card p {
+    margin: 8px 0;
+}
+
+form {
+    max-width: 700px;
+    background: var(--negro-secundario);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 0, 26, 0.55);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.formulario-grupo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #444;
+    border-radius: 7px;
+    background: #0b0b0b;
+    color: var(--blanco);
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--rojo-principal);
+    outline: none;
+}
+
+button {
+    padding: 13px 25px;
+    border: 1px solid var(--rojo-principal);
+    border-radius: 8px;
+    background: var(--rojo-principal);
+    color: var(--blanco);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--rojo-oscuro);
+}
+
+.alerta {
+    max-width: 700px;
+    margin-bottom: 25px;
+    padding: 18px;
+    border: 1px solid var(--rojo-principal);
+    border-radius: 8px;
+    background: rgba(177, 0, 32, 0.15);
+}
+
+.alerta h3 {
+    margin-top: 0;
+    color: #ff6b7f;
+}
+
+.alerta li {
+    margin-bottom: 8px;
+}
+
+.estado {
+    max-width: 700px;
+    background: var(--negro-secundario);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 0, 26, 0.55);
+}
+
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    background: #000000;
+    border-top: 1px solid rgba(139, 0, 26, 0.5);
+    color: #777;
+}
+
+footer p {
+    margin: 5px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+    .barra-navegacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tarjetas,
+    .reservas {
+        grid-template-columns: 1fr;
+    }
+
+    section h2 {
+        font-size: 34px;
+    }
+
+    .hero-contenido h2 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 500px) {
+    .barra-navegacion {
+        padding: 18px 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    section {
+        padding: 45px 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}

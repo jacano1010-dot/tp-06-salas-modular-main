@@ -1,0 +1,43 @@
+<section>
+    <p>Turnos del gimnasio</p>
+    <h2>Turnos registrados</h2>
+    <p>Consultá los turnos reservados y accedé al detalle de cada uno.</p>
+
+    <div class="botones">
+        <a href="/reservas/nueva" class="boton">Reservar turno</a>
+    </div>
+
+    <% if (reservas.length===0) { %>
+        <div class="alerta">
+            <h3>No hay turnos</h3>
+            <p>No hay turnos registrados actualmente.</p>
+        </div>
+        <% } else { %>
+            <div class="reservas">
+                <% reservas.forEach((reserva)=> { %>
+                    <article class="reserva-card">
+                        <h3>Turno #<%= reserva.id %>
+                        </h3>
+
+                        <p><strong>Socio:</strong>
+                            <%= reserva.estudiante %>
+                        </p>
+                        <p><strong>Sucursal:</strong>
+                            <%= reserva.sucursal %>
+                        </p>
+                        <p><strong>Fecha:</strong>
+                            <%= reserva.fecha %>
+                        </p>
+                        <p><strong>Turno:</strong>
+                            <%= reserva.turno %>
+                        </p>
+                        <p><strong>Personas:</strong>
+                            <%= reserva.personas %>
+                        </p>
+
+                        <a href="/reservas/<%= reserva.id %>" class="boton">Ver detalle</a>
+                    </article>
+                    <% }) %>
+            </div>
+            <% } %>
+</section>
